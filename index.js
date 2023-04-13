@@ -1,7 +1,9 @@
 import express from "express"
+import cors from "cors"
 import selectWorkouts from "./workouts.js"
 
 const app = express()
+app.use(cors())
 
 app.get("/workouts", (req, res) => {
   const { part, difficulty } = req.query
