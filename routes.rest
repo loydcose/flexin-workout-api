@@ -1,1 +1,1 @@
-GET http://localhost:5000/workouts?part=abs&difficulty=beginner
+GET http://localhost:5000/workouts?part=back&difficulty=beginner

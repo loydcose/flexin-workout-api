@@ -338,7 +338,7 @@ const allWorkouts = [
   {
     id: 57,
     title: "Arm Scissors",
-    image: "arm-circles",
+    image: "arm-scissors",
     type: "duration",
   },
   {
@@ -554,13 +554,13 @@ const allWorkouts = [
   {
     id: 92,
     title: "Bottom Leg Lift Left",
-    image: "bottom-lef-lift-left",
+    image: "bottom-leg-lift-left",
     type: "repetition",
   },
   {
     id: 93,
     title: "Bottom Leg Lift Right",
-    image: "bottom-lef-lift-right",
+    image: "bottom-leg-lift-right",
     type: "repetition",
   },
   {
@@ -572,7 +572,7 @@ const allWorkouts = [
   {
     id: 95,
     title: "Jumping Squats",
-    image: "jumping-jacks",
+    image: "jumping-squats",
     type: "repetition",
   },
   {
@@ -712,6 +712,12 @@ const allWorkouts = [
     title: "Reverse Snow Angels",
     image: "reverse-slow-angels",
     type: "repetition",
+  },
+  {
+    id: 119,
+    title: "Arm Raises",
+    image: "arm-raises",
+    type: "duration",
   },
 ]
 const workouts = {
@@ -1093,6 +1099,7 @@ const selectWorkouts = (part, difficulty) => {
   const mapped = workouts[part][difficulty].map((item) => {
     const [name, longevity] = item
     const workout = allWorkouts.find((item) => item.image === name)
+
     return { ...workout, image: imageUrl + workout.image, longevity }
   })
   return mapped
